@@ -9,7 +9,7 @@ Atividade de API com 5 micros-serviços para conexão com banco de dados utiliza
 * **Comunicação Inter-serviços:** Fetch API (Nativa do Node)
 * **Testes de API:** Thunder Client (VS Code)
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 O sistema é composto por 5 microsserviços independentes:
 
 * `product-service` (Porta 3001) - Cadastro e consulta de catálogo.
@@ -20,7 +20,7 @@ O sistema é composto por 5 microsserviços independentes:
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
 ### Pré-requisitos
 1. Certifique-se de ter o **Node.js** instalado.
