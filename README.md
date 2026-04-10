@@ -1,49 +1,26 @@
 # API_ECOMMERCE_CP3029832
-Atividade de API com 5 micros-serviços para conexão com banco de dados utilizando Node.js com Express, Prisma e node fetch proporcionado pelo node nativo.
 
-## Tecnologias Utilizadas
-* **Ambiente de Execução:** Node.js (v18+)
-* **Framework Web:** Express.js
-* **Banco de Dados:** MongoDB (Instâncias isoladas para cada serviço)
-* **ORM:** Prisma 7
-* **Comunicação Inter-serviços:** Fetch API (Nativa do Node)
-* **Testes de API:** Thunder Client (VS Code)
+# 🛒 E-commerce Microservices - IFSP Campinas (P1)
 
-## Estrutura do Projeto
-O sistema é composto por 5 microsserviços independentes:
+[cite_start]Sistema de e-commerce baseado em microsserviços com persistência isolada e comunicação REST[cite: 6, 9].
 
-* `product-service` (Porta 3001) - Cadastro e consulta de catálogo.
-* `user-service` (Porta 3002) - Gerenciamento de clientes.
-* `inventory-service` (Porta 3003) - Controle de estoque.
-* `payment-service` (Porta 3004) - Simulação de pagamentos.
-* `order-service` (Porta 3005) - Orquestrador do fluxo de pedidos.
+## [cite_start]📋 Descrição dos Serviços [cite: 129]
+- [cite_start]**Product Service (3001):** Gerencia o catálogo de produtos[cite: 31].
+- [cite_start]**User Service (3002):** Gerencia usuários e clientes[cite: 37].
+- [cite_start]**Inventory Service (3003):** Controle de estoque e disponibilidade[cite: 57].
+- [cite_start]**Payment Service (3004):** Simulação de processamento de pagamentos[cite: 62].
+- [cite_start]**Order Service (3005):** Orquestrador do fluxo de pedidos[cite: 46].
 
----
+## [cite_start]🛠️ Tecnologias e Regras [cite: 94]
+- **Node.js + Express:** Servidor e rotas.
+- [cite_start]**Mongoose (MongoDB):** Persistência isolada por serviço[cite: 17, 96].
+- [cite_start]**Axios:** Comunicação inter-serviços via HTTP[cite: 16, 98].
 
-## Como Executar o Projeto
-
-### Pré-requisitos
-1. Certifique-se de ter o **Node.js** instalado.
-2. O **MongoDB Community Edition** deve estar rodando localmente na porta padrão `27017`.
-
-### Passo a Passo
-
-1. **Configuração dos Bancos de Dados:**
-   Em cada uma das 5 pastas de serviço, verifique ou crie o arquivo `.env` apontando para sua respectiva database:
-   * Product: `mongodb://localhost:27017/product_db?directConnection=true`
-   * User: `mongodb://localhost:27017/user_db?directConnection=true`
-   * Inventory: `mongodb://localhost:27017/inventory_db?directConnection=true`
-   * Payment: `mongodb://localhost:27017/payment_db?directConnection=true`
-   * Order: `mongodb://localhost:27017/order_db?directConnection=true`
-
-2. **Instalação e Inicialização:**
-   Abra 5 terminais no VS Code (um para cada serviço) e execute em cada um deles:
+## [cite_start]🚀 Como Executar [cite: 127, 151]
+1. Certifique-se que o MongoDB está rodando localmente na porta 27017.
+2. Em **cada pasta**, instale as dependências:
    ```bash
-   # Instalar as dependências
    npm install
-   
-   # Gerar os arquivos de tipagem do Prisma
-   npx prisma generate
-   
-   # Iniciar o servidor
-   node server.js
+3. Inicie os serviços em terminais separados:
+```bash
+node server.js
